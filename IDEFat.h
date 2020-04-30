@@ -283,9 +283,9 @@ class IDEFile : public Print {
   }
   /** \return IDEVolume that contains this file. */
   IDEVolume* volume(void) const {return vol_;}
-  void write(uint8_t b);
+  size_t write(uint8_t b);
   int16_t write(const void* buf, uint16_t nbyte);
-  void write(const char* str);
+  size_t write(const char* str);
   void write_P(PGM_P str);
   void writeln_P(PGM_P str);
 //------------------------------------------------------------------------------

@@ -1218,7 +1218,7 @@ int16_t IDEFile::write(const void* buf, uint16_t nbyte) {
  *
  * Use IDEFile::writeError to check for errors.
  */
-void IDEFile::write(uint8_t b) {
+size_t IDEFile::write(uint8_t b) {
   write(&b, 1);
 }
 //------------------------------------------------------------------------------
@@ -1227,7 +1227,7 @@ void IDEFile::write(uint8_t b) {
  *
  * Use IDEFile::writeError to check for errors.
  */
-void IDEFile::write(const char* str) {
+size_t IDEFile::write(const char* str) {
   write(str, strlen(str));
 }
 //------------------------------------------------------------------------------
